@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="">Password</label>
+        <input type="password" id="password">
+        <span onclick="TogglePasswordVisibility()">show</span>
+    </div>
+
+    <script>
+        function TogglePasswordVisibility()
+        {
+            let passwordField=document.getElementById("password");
+            let ToggleButton=document.querySelector("span");
+            
+            if(passwordField.type==="password")
+            {
+                passwordField.type='text';
+                ToggleButton.textContent="Hide";
+            }
+            else{
+                passwordField.type="password";
+                ToggleButton.textContent="Show";
+            }
+        }
+    </script>
+</body>
+</html>
